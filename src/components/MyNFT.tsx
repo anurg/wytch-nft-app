@@ -287,7 +287,7 @@ export const MyNFT: FC = () => {
 
         myNFTsArray.push({
           name: data.name.toString(),
-          symbol: data.symbol.toString(),
+          //   symbol: data.symbol.toString(),
           image: data.image.toString(),
           nftMetadata: myNfts[x].uri.toString(),
         });
