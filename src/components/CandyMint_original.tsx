@@ -812,7 +812,7 @@ export const CandyMint: FC = () => {
           const data = await response.json();
 
           if (
-            //Eyes
+            //type 1
 
             ((_value0_1 == "" &&
               _value1_1 == "" &&
@@ -1205,43 +1205,43 @@ export const CandyMint: FC = () => {
   //FACE
 
   const face0 = () => {
-    set_value0_1("Sleepy");
+    set_value0_1("Faces1");
   };
 
   const face1 = () => {
-    set_value1_1("out");
+    set_value1_1("Faces2");
   };
 
   const face2 = () => {
-    set_value2_1("cloudy");
+    set_value2_1("Faces3");
   };
 
   const face3 = () => {
-    set_value3_1("angry");
+    set_value3_1("Faces4");
   };
 
   const face4 = () => {
-    set_value4_1("hypnotised");
+    set_value4_1("Faces5");
   };
 
   const face5 = () => {
-    set_value5_1("ethereum");
+    set_value5_1("Faces6");
   };
 
   const _face0 = () => {
-    set_value0_1("sunglasses");
+    set_value0_1("");
   };
 
   const _face1 = () => {
-    set_value1_1("laserbeam");
+    set_value1_1("");
   };
 
   const _face2 = () => {
-    set_value2_1("laughing");
+    set_value2_1("");
   };
 
   const _face3 = () => {
-    set_value3_1("angry");
+    set_value3_1("");
   };
 
   const _face4 = () => {
@@ -1682,16 +1682,20 @@ export const CandyMint: FC = () => {
             <div className="typesMain">
               {selectedType === null ? (
                 <>
-                  <button onClick={() => handleClick("type1")}>Eyes</button>
-                  <button onClick={() => handleClick("type2")}>Hat</button>
-                  <button onClick={() => handleClick("type3")}>Color</button>
-                  <button onClick={() => handleClick("type4")}>Mouth</button>
+                  <button onClick={() => handleClick("type1")}>Type 1</button>
+                  <button onClick={() => handleClick("type2")}>Type 2</button>
+                  <button onClick={() => handleClick("type3")}>Type 3</button>
+                  <button onClick={() => handleClick("type4")}>Type 4</button>
+                  <button onClick={() => handleClick("type5")}>Type 5</button>
+                  <button onClick={() => handleClick("type6")}>Type 6</button>
                 </>
               ) : (
                 <>
                   {selectedType === "type1" && (
                     <div className="typesMain2">
-                      <button onClick={() => handleClick("type1")}>Eyes</button>
+                      <button onClick={() => handleClick("type1")}>
+                        Type 1
+                      </button>
                       <div className="valuesDiv">
                         {_value0_1 === "" ? (
                           <div onClick={face0}>Face1</div>
@@ -1752,7 +1756,9 @@ export const CandyMint: FC = () => {
                   )}
                   {selectedType === "type2" && (
                     <div className="typesMain2">
-                      <button onClick={() => handleClick("type2")}>Hat</button>
+                      <button onClick={() => handleClick("type2")}>
+                        Type 2
+                      </button>
                       <div className="valuesDiv">
                         {_value0_2 === "" ? (
                           <div onClick={ear0}>Ear1</div>
@@ -1813,7 +1819,7 @@ export const CandyMint: FC = () => {
                   {selectedType === "type3" && (
                     <div className="typesMain2">
                       <button onClick={() => handleClick("type3")}>
-                        Color
+                        Type 3
                       </button>
                       <div className="valuesDiv">
                         {_value0_3 === "" ? (
@@ -1905,7 +1911,7 @@ export const CandyMint: FC = () => {
                   {selectedType === "type4" && (
                     <div className="typesMain2">
                       <button onClick={() => handleClick("type4")}>
-                        Mouth
+                        Type 4
                       </button>
                       <div className="valuesDiv">
                         {_value0_4 === "" ? (
@@ -1939,6 +1945,121 @@ export const CandyMint: FC = () => {
                             ✔ whisker4
                           </div>
                         )}
+                      </div>
+                      <div
+                        className="apply"
+                        onClick={() => collection(_pageNo)}
+                      >
+                        Apply
+                      </div>
+                    </div>
+                  )}
+                  {selectedType === "type5" && (
+                    <div className="typesMain2">
+                      <button onClick={() => handleClick("type5")}>
+                        Type 5
+                      </button>
+                      <div className="valuesDiv">
+                        {_value0_4 === "" ? (
+                          <div onClick={outline0}>outline1</div>
+                        ) : (
+                          <div onClick={_outline0} id="selectedT">
+                            ✔ outline1
+                          </div>
+                        )}
+
+                        {_value1_5 === "" ? (
+                          <div onClick={outline1}>outline2</div>
+                        ) : (
+                          <div onClick={_outline1} id="selectedT">
+                            ✔ outline2
+                          </div>
+                        )}
+
+                        {_value2_5 === "" ? (
+                          <div onClick={outline2}>outline3</div>
+                        ) : (
+                          <div onClick={_outline2} id="selectedT">
+                            ✔ outline3
+                          </div>
+                        )}
+
+                        {/*} {_value3_5 === '' ?
+                                                    (<div onClick={outline3}>outline4</div>) : (<div onClick={_outline3} id='selectedT'>✔ outline4</div>)}
+
+                                                {_value4_5 === '' ?
+                                                    (<div onClick={outline3}>outline5</div>) : (<div onClick={_outline3} id='selectedT'>✔ outline5</div>)}
+                                    */}
+                      </div>
+                      <div
+                        className="apply"
+                        onClick={() => collection(_pageNo)}
+                      >
+                        Apply
+                      </div>
+                    </div>
+                  )}
+                  {selectedType === "type6" && (
+                    <div className="typesMain2">
+                      <button onClick={() => handleClick("type6")}>
+                        Type 6
+                      </button>
+                      <div className="valuesDiv">
+                        {_value0_6 === "" ? (
+                          <div onClick={eye0}>eye1</div>
+                        ) : (
+                          <div onClick={_eye0} id="selectedT">
+                            ✔ eye1
+                          </div>
+                        )}
+
+                        {_value1_6 === "" ? (
+                          <div onClick={eye1}>eye2</div>
+                        ) : (
+                          <div onClick={_eye1} id="selectedT">
+                            ✔ eye2
+                          </div>
+                        )}
+
+                        {_value2_6 === "" ? (
+                          <div onClick={eye2}>eye3</div>
+                        ) : (
+                          <div onClick={_eye2} id="selectedT">
+                            ✔ eye3
+                          </div>
+                        )}
+
+                        {_value3_6 === "" ? (
+                          <div onClick={eye3}>eye4</div>
+                        ) : (
+                          <div onClick={_eye3} id="selectedT">
+                            ✔ eye4
+                          </div>
+                        )}
+
+                        {_value4_6 === "" ? (
+                          <div onClick={eye4}>eye5</div>
+                        ) : (
+                          <div onClick={_eye4} id="selectedT">
+                            ✔ eye5
+                          </div>
+                        )}
+
+                        {/*{_value5_6 === '' ?
+                                                    (<div onClick={eye5}>eye6</div>) : (<div onClick={_eye5} id='selectedT'>✔ eye6</div>)}
+
+                                                {_value6_6 === '' ?
+                                                    (<div onClick={eye6}>eye7</div>) : (<div onClick={_eye6} id='selectedT'>✔ eye7</div>)}
+
+                                                {_value7_6 === '' ?
+                                                    (<div onClick={eye7}>eye8</div>) : (<div onClick={_eye7} id='selectedT'>✔ eye8</div>)}
+
+                                                {_value8_6 === '' ?
+                                                    (<div onClick={eye8}>eye10</div>) : (<div onClick={_eye8} id='selectedT'>✔ eye10</div>)}
+
+                                                {_value9_6 === '' ?
+                                                    (<div onClick={eye9}>eye11</div>) : (<div onClick={_eye9} id='selectedT'>✔ eye11</div>)}
+                                                */}
                       </div>
                       <div
                         className="apply"

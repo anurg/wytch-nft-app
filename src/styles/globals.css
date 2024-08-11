@@ -17,6 +17,10 @@ body {
   /* or scroll if you want a scroll bar to always appear */
 }
 
+.logo:hover{
+  cursor: pointer;
+}
+
 #selectedT{
   background-color: #46d159;
 }
@@ -637,11 +641,11 @@ a {
   }
 
   .mintedNFT {
-    width: 280px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -10px;
   }
 
   .idAmount {
@@ -1226,11 +1230,11 @@ a {
   }
 
   .mintedNFT {
-    width: 400px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -15px;
   }
 
   .idAmount {

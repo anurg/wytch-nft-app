@@ -19,6 +19,10 @@ const tweet = () => {
 	window.open("https://x.com/WitchezzFrenzy");
 }
 
+const home = () => {
+	window.open("https://www.witchezzfrenzy.com/");
+}
+
 const WalletMultiButtonDynamic = dynamic(
   async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
   { ssr: false }
@@ -47,6 +51,7 @@ export const AppBar: React.FC = () => {
           <img className='me' onClick={meL} src="https://optimusassets.pages.dev/imgs/magiceden.png"/>
            <img className='me' src="https://social-c3e.pages.dev/imgs/twitter (1).png" onClick={tweet}/>
           <img className='me' src="https://social-op.pages.dev/imgs/telegram.png" onClick={tg}/>
+          <img className='me' src="https://cdn-icons-png.flaticon.com/128/10003/10003015.png" onClick={home}/>
           <div className='mynft' onClick={() => window.location.href = 'mynft'}>MY NFTs</div>
 
           <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-6 " />

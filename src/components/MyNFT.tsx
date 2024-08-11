@@ -147,7 +147,7 @@ export const MyNFT: FC = () => {
             const candyMachine = await fetchCandyMachine(umi, candyMachineAddress);
             let itemDataArray: ItemData[] = [];
 
-            console.log("reading data : " + JSON.stringify(candyMachine.items[0]));
+            // console.log("reading data : " + JSON.stringify(candyMachine.items[0]));
 
             console.log("pageNo : " + pageNo);
             let o = ((pageNo - 1) * 4);
@@ -265,23 +265,22 @@ export const MyNFT: FC = () => {
             owner: wallet.publicKey/*metaplex.identity().publicKey*/
         });
 
-        // 3ehuxJLxKVyLtmoz351DAFZNERai4UNqmTnsXnuSqeoy
+         console.log("myNfts : " + myNfts);
 
-
+        let myNFTsArray: NFT[] = [];
         for (let x = 0; x < myNfts.length; x++) {
-            let myNFTsArray: NFT[] = [...showMyNFTs];
 
-            if (myNfts[x].symbol == "WF") {
-                console.log("myNfts[x].uri : " + myNfts[x].uri);
-
+            if (myNfts[x].symbol == "WF" && String(myNfts[x].name).includes("Witchezz Frenzy")) {
+                console.log("NAME : " + myNfts[x].name.split('#')[0]);
+ 
                 const response = await fetch(myNfts[x].uri);
                 const data = await response.json();
-                console.log("image_ : " + data.image);
-
+                console.log("image_ : " + JSON.stringify(data));
 
                 myNFTsArray.push({ name: data.name.toString(), symbol: data.symbol.toString(), image: data.image.toString(), nftMetadata: myNfts[x].uri.toString() });
 
                 console.log("myNFTsArray : " + JSON.stringify(myNFTsArray[0].image));
+ 
             }
 
             set_showMyNFTs(myNFTsArray);
