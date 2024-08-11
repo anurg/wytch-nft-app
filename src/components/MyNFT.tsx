@@ -56,7 +56,7 @@ interface ItemData {
 
 interface NFT {
   name: string;
-  symbol: string;
+  //   symbol: string;
   image: string;
   nftMetadata?: string;
 }
@@ -276,7 +276,7 @@ export const MyNFT: FC = () => {
     let myNFTsArray: NFT[] = [];
     for (let x = 0; x < myNfts.length; x++) {
       if (
-        myNfts[x].symbol == "WF" &&
+        // myNfts[x].symbol == "WF" &&
         String(myNfts[x].name).includes("Witchezz Frenzy")
       ) {
         console.log("NAME : " + myNfts[x].name.split("#")[0]);
@@ -287,7 +287,7 @@ export const MyNFT: FC = () => {
 
         myNFTsArray.push({
           name: data.name.toString(),
-          symbol: data.symbol.toString(),
+          //   symbol: data.symbol.toString(),
           image: data.image.toString(),
           nftMetadata: myNfts[x].uri.toString(),
         });
