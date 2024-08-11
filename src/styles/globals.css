@@ -294,7 +294,7 @@ a {
   .valuesDiv {
     display: flex;
     justify-content: center;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -315,6 +315,7 @@ a {
     cursor: pointer;
     padding: 3px;
     font-size: 12px;
+    margin: 5px;
 
   }
 
@@ -886,7 +887,7 @@ a {
   .valuesDiv {
     display: flex;
     justify-content: center;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -907,7 +908,7 @@ a {
     cursor: pointer;
     padding: 3px;
     font-size: 12px;
-
+    margin: 5px;
   }
 
   .apply {
