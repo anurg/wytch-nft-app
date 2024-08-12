@@ -40,7 +40,7 @@ export const AppBar: React.FC = () => {
           <div className="hidden sm:inline w-22 h-22 md:p-2 ml-10">
           <img className='logo' onClick={() => window.location.href = '/'} src="https://witch-8vg.pages.dev/imgs/witch.jpg"/>
            </div>
-           <div className='mynft'> Solana Devnet Version(for Testing)</div>
+           {/* <div className='mynft'> Solana Devnet Version(for Testing)</div> */}
           <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
 
         </div>
