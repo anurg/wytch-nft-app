@@ -40,6 +40,7 @@ export const AppBar: React.FC = () => {
           <div className="hidden sm:inline w-22 h-22 md:p-2 ml-10">
           <img className='logo' onClick={() => window.location.href = '/'} src="https://witch-8vg.pages.dev/imgs/witch.jpg"/>
            </div>
+           <div className='mynft'> Solana Devnet Version(for Testing)</div>
           <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
 
         </div>
@@ -47,13 +48,14 @@ export const AppBar: React.FC = () => {
         {/* Nav Links */}
         {/* Wallet & Settings */}
         <div className="navbar-end">
+        
           <div className="hidden md:inline-flex align-items-center justify-items gap-6">
           <img className='me' onClick={meL} src="https://optimusassets.pages.dev/imgs/magiceden.png"/>
            <img className='me' src="https://social-c3e.pages.dev/imgs/twitter (1).png" onClick={tweet}/>
           <img className='me' src="https://social-op.pages.dev/imgs/telegram.png" onClick={tg}/>
           <img className='me' src="https://cdn-icons-png.flaticon.com/128/10003/10003015.png" onClick={home}/>
           <div className='mynft' onClick={() => window.location.href = 'mynft'}>MY NFTs</div>
-
+          
           <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-6 " />
 
           
