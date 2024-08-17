@@ -27,7 +27,10 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const { autoConnect } = useAutoConnect();
     const { networkConfiguration } = useNetworkConfiguration();
     const network = networkConfiguration as WalletAdapterNetwork;
-    const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+    const endpoint = useMemo(() => {
+        const customEndpoint = process.env.NEXT_PUBLIC_RPC;
+        return customEndpoint;
+    }, [network]);
 
     console.log(network);
 
